@@ -4,9 +4,33 @@
         <servlet-name>AdditionServlet</servlet-name>
         <servlet-class>za.ac.tut.controller.AdditionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SubtractionServlet</servlet-name>
+        <servlet-class>za.ac.tut.controller.SubtractionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MultiplicationServlet</servlet-name>
+        <servlet-class>za.ac.tut.controller.MultiplicationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DivisionServlet</servlet-name>
+        <servlet-class>za.ac.tut.controller.DivisionServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AdditionServlet</servlet-name>
         <url-pattern>/AdditionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubtractionServlet</servlet-name>
+        <url-pattern>/SubtractionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MultiplicationServlet</servlet-name>
+        <url-pattern>/MultiplicationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DivisionServlet</servlet-name>
+        <url-pattern>/DivisionServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -24,5 +48,9 @@
     <error-page>
         <exception-type>za.ac.tut.controller.NumberException</exception-type>
         <location>/negative_number_error.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.ArithmeticException</exception-type>
+        <location>/division_by_zero_error.jsp</location>
     </error-page>
 </web-app>
